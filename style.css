@@ -1,5 +1,29 @@
+
+/*HTML resetter*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+
 body{
-    background-color: #efefef;
+    background-color: white;
 }
 
 p{
@@ -7,14 +31,21 @@ p{
 }
 
 .title{
+    margin: 1rem;
     text-align: center;
 }
 
+.container{
+    height: 100%;
+    border-top: 5px solid #bfbfbf;
+    background-color: #efefef;
+}
+
 .subtitle{
-    width: 15rem;
-    margin: auto;
-    font-style: italic;
+    clear: both;
+    text-align: center;
     padding-top: 1rem;
+    font-style: italic;
 }
 
 .column{
@@ -27,15 +58,15 @@ p{
     align-items: center;
     margin: -2px;
     padding: 0 !important;
-}
-
-.column{
     color:white;
+    font-weight: bold;
     background-color: white;
 }
 
+
 .box-container{
-    width: 70vw;
+    margin-top: 2px;
+    width: 68vw;
     background-color: #efefef;
 }
 
@@ -49,6 +80,7 @@ p{
     box-shadow: 0px 4px #2a8dac;
     margin: auto;
     margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 .btn:hover{
@@ -60,5 +92,69 @@ p{
 }
 
 .btn-container{
-    width: 27vw;
+    width: 30vw;
+}
+
+@media screen and (max-width: 500px) {
+
+    .title{
+        background-color: #333333;
+        color:white;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+        padding: 1rem 0rem;
+        font-size: 200%;
+    }
+
+    .mob-container{
+        width: 100vw;
+        border: none;
+        display: flex;
+        flex-direction: column-reverse;
+        background-color: white;
+    }
+
+    .container{
+        border: none;
+        background-color: white;
+    }
+    
+    .btn-container{
+        width: 60vw;
+        margin: auto;
+        clear: both;
+        display: inline-flex;
+    }
+
+    .box-container{
+        width: 100vw;
+        clear:both;
+        background: white;
+    }
+
+    .btn{
+        width: 5rem;
+    }
+
+    .column{
+        display: flex;
+        width: 90%;
+        font-size: 120%;
+        margin: auto;
+        margin-top: 5px;
+        background-color: #efefef;
+        color: black;
+        position: relative;
+        height: 7vh;
+    }
+
+    .mob-color{
+        position: absolute;
+        left:0;
+        height: 100%;
+        width: 3%;
+    }
+
+
 }
